@@ -1,7 +1,31 @@
-from databases import create_connection, convert_column_to_datetime
+from connection import create_connection
 import pandas as pd
 from datetime import datetime
 import logging
+
+
+def convert_column_to_datetime(df: pd.DataFrame, column: str) -> pd.DataFrame:
+    """
+    Converts the specified column in the DataFrame from UNIX timestamp format to datetime.
+
+    Args:
+        df (pd.DataFrame): The DataFrame containing the column to convert.
+        column (str): The name of the column to convert to datetime.
+
+    Returns:
+        pd.DataFrame: The DataFrame with the specified column converted to datetime.
+    """
+    try:
+        df[column] = pd.to_datetime(
+            df[column], unit="ms"
+        )  # Convert UNIX timestamp to datetime
+        return df
+    except KeyError:
+        print(f"Column {column} does not exist in the DataFrame.")
+        return df
+    except Exception as e:
+        print(f"An error occurred while converting {column} to datetime: {e}")
+        return df
 
 
 def fetch_data_from_mongodb(database: str, collection: str) -> pd.DataFrame:
@@ -47,6 +71,7 @@ def process_dataframe(df: pd.DataFrame, date_column: str) -> pd.DataFrame:
             "Funnel Fact.Package",
             "Blk State",
             "Blk Cluster",
+            "Funn Monthcontractperiod",
             "Funnel SO No",
             date_column,
         ]
@@ -58,7 +83,15 @@ def process_dataframe(df: pd.DataFrame, date_column: str) -> pd.DataFrame:
         processed_df = (
             df.dropna(subset=[date_column])
             .set_index(date_column)
-            .groupby([" Channel", "Funnel Fact.Package", "Blk State", "Blk Cluster"])
+            .groupby(
+                [
+                    " Channel",
+                    "Funnel Fact.Package",
+                    "Blk State",
+                    "Blk Cluster",
+                    "Funn Monthcontractperiod",
+                ]
+            )
             .resample("W-SUN")["Funnel SO No"]
             .count()
             .reset_index()
@@ -99,6 +132,12 @@ def filter_by_date(
     except Exception as e:
         logging.error(f"Error filtering DataFrame: {e}")
         raise
+
+
+def remove_zero_value_columns(
+    df: pd.DataFrame, column_to_filter: str = "Funnel SO No"
+) -> pd.DataFrame:
+    return df.loc[df[column_to_filter] > 0]
 
 
 def export_dataframe_to_csv(df: pd.DataFrame, output_filepath: str) -> None:
@@ -152,8 +191,11 @@ def export_data_to_csv(
         # Step 3: Filter data from 2022 onwards
         filtered_df = filter_by_date(processed_df, date_column, start_date)
 
+        # Step 3a: Remove 0 value rows from dataframe
+        no_zero_df = remove_zero_value_columns(filtered_df)
+
         # Step 4: Export the filtered data to CSV
-        export_dataframe_to_csv(filtered_df, output_filepath)
+        export_dataframe_to_csv(no_zero_df, output_filepath)
 
         logging.info("Data export process completed successfully.")
 
@@ -168,7 +210,8 @@ if __name__ == "__main__":
     database_name = "deep-diver"
     collection_name = "boreport"
     date_col = "Probability 90% Date"
-    output_file = "modeling_sales.csv"
+    today_date = datetime.now().strftime("%Y-%m-%d %H%M%S")
+    output_file = f"../data/processed/002_izzaz_{today_date}_sales.csv"
     start_filter_date = datetime(2022, 1, 1)
 
     export_data_to_csv(
