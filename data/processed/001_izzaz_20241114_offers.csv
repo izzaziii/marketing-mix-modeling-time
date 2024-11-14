@@ -1,0 +1,44 @@
+﻿date,end_date,brand,category,campaign,product,geography,sales_channel,offer_type,offer_measure_type,offer_measure,offer_value,currency_code,additional_notes
+2024-04-15,2024-12-31,Time,Time,all products,200Mbps 24M,nationwide,online,free subscription,number of months,1,99,MYR,
+2024-04-15,2024-12-31,Time,Time,all products,600Mbps 24M,nationwide,online,free subscription,number of months,1,139,MYR,
+2024-04-15,2024-12-31,Time,Time,all products,600Mbps 24M,nationwide,online,monthly discounts,monthly discount,40,240,MYR,
+2024-04-15,2024-12-31,Time,Time,all products,1Gbps 24M,nationwide,online,free subscription,number of months,1,199,MYR,
+2024-04-15,2024-12-31,Time,Time,all products,2Gbps 24M,nationwide,online,free subscription,number of months,1,379,MYR,
+2024-04-15,2024-12-31,Time,Time,Pakej MyKabel,200Mbps 24M,nationwide,all,monthly discounts,monthly discount,30,720,MYR,Malaysian public housing (PPR)
+2024-04-15,2024-12-31,Time,Time,Pakej MyKabel,600Mbps 24M,nationwide,all,monthly discounts,monthly discount,20,480,MYR,Malaysian public housing (PPR)
+2024-04-15,2024-12-31,Time,Time,Pakej MyKabel,1Gbps 24M,nationwide,all,monthly discounts,monthly discount,20,480,MYR,Malaysian public housing (PPR)
+2023-02-12,2023-05-21,Time,Time,all products,500Mbps 24M,nationwide,online,eWallet credits,credits value,100,100,MYR,
+2023-02-12,2023-05-21,Time,Time,all products,1Gbps 24M,nationwide,online,eWallet credits,credits value,150,150,MYR,
+2023-02-12,2023-05-21,Time,Time,all products,2Gbps 24M,nationwide,online,eWallet credits,credits value,200,200,MYR,
+2022-11-13,2023-02-28,Time,Time,Pakej MyKabel,100Mbps 24M,nationwide,all,monthly discounts,monthly discount total,20,480,MYR,Malaysian public housing (PPR)
+2022-11-13,2023-02-28,Time,Time,Pakej MyKabel,500Mbps 24M,nationwide,all,monthly discounts,monthly discount total,20,480,MYR,Malaysian public housing (PPR)
+2022-11-13,2023-02-28,Time,Time,Pakej MyKabel,1Gbps 24M,nationwide,all,monthly discounts,monthly discount total,20,480,MYR,Malaysian public housing (PPR)
+2022-11-05,2023-02-12,Time,Time,all products,500Mbps 24M,nationwide,online,eWallet credits,credits value,100,100,MYR,
+2022-11-05,2023-02-12,Time,Time,all products,1Gbps 24M,nationwide,online,eWallet credits,credits value,150,150,MYR,
+2022-11-05,2023-02-12,Time,Time,all products,2Gbps 24M,nationwide,online,eWallet credits,credits value,200,200,MYR,
+2023-10-19,2023-10-22,Time,Time,Gig Speed Home FTTR,1Gbps 24M,nationwide,all,IKEA gift card + free subscription,number of months,12,10208,MYR,first place for a contest
+2023-10-19,2023-10-22,Time,Time,Gig Speed Home FTTR,1Gbps 24M,nationwide,all,IKEA gift card + free subscription,number of months,12,8708,MYR,2nd place for a contest
+2023-10-19,2023-10-22,Time,Time,Gig Speed Home FTTR,1Gbps 24M,nationwide,all,IKEA gift card + free subscription,number of months,12,7708,MYR,3rd place for a contest
+2023-10-19,2023-10-22,Time,Time,Gig Speed Home FTTR,1Gbps 24M,nationwide,all,IKEA gift card + free subscription,number of months,12,6858,MYR,consolation prize for a contest
+2023-10-19,,Time,Time,Gig Speed Home FTTR,1Gbps 24M,nationwide,online,monthly discounts,monthly discount total,55,1320,MYR,1 Parent + 1 Child Node https://www.time.com.my/for-home/gig-speed-home 
+2023-10-19,,Time,Time,Gig Speed Home FTTR,1Gbps 24M,nationwide,online,monthly discounts,monthly discount total,75,1800,MYR,1 Parent + 2 Child Nodes https://www.time.com.my/for-home/gig-speed-home
+2023-10-19,,Time,Time,Gig Speed Home FTTR,1Gbps 24M,nationwide,online,monthly discounts,monthly discount total,90,2160,MYR,1 Parent + 3 Child Nodes https://www.time.com.my/for-home/gig-speed-home
+2022-11-06,2023-02-12,Time,Time,all products,500Mbps 24M,nationwide,online,eWallet credits,credits value,100,100,MYR,
+2022-11-06,2023-02-12,Time,Time,all products,1Gbps 24M,nationwide,online,eWallet credits,credits value,150,150,MYR,
+2022-11-06,2023-02-12,Time,Time,all products,2Gbps 24M,nationwide,online,eWallet credits,credits value,200,200,MYR,
+2022-07-10,2022-10-09,Time,Time,all products,100Mbps 24M,nationwide,online,Free Gift,minutes of voice calls,30,3,MYR,FOC Voice Minutes for Voice plans
+2022-07-10,2022-10-09,Time,Time,all products,500Mbps 24M,nationwide,online,Free Gift,minutes of voice calls,30,3,MYR,FOC Voice Minutes for Voice plans
+2022-07-10,2022-10-09,Time,Time,all products,1Gbps 24M,nationwide,online,Free Gift,minutes of voice calls,30,3,MYR,FOC Voice Minutes for Voice plans
+2022-04-03,2022-07-17,Time,Time,all products,500Mbps 24M,nationwide,online,free subscription,number of months,1,139,MYR,
+2022-04-03,2022-07-17,Time,Time,all products,1Gbps 24M,nationwide,online,free subscription,number of months,1,199,MYR,
+2022-04-03,2022-07-17,Time,Time,all products,500Mbps 24M,nationwide,online,Free Gift,free gifts given,1,169,MYR,WiFi 5 Router
+2022-04-03,2022-07-17,Time,Time,all products,1Gbps 24M,nationwide,online,Free Gift,free gifts given,1,169,MYR,WiFi 5 Router
+2022-02-20,2022-04-03,Time,Time,all products,100Mbps 24M,nationwide,all,free subscription,number of months,1,99,MYR,
+2022-02-20,2022-04-03,Time,Time,all products,500Mbps 24M,nationwide,all,free subscription,number of months,1,139,MYR,
+2022-02-20,2022-04-03,Time,Time,all products,1Gbps 24M,nationwide,all,free subscription,number of months,1,199,MYR,
+2021-12-05,2022-04-03,Time,Time,all products,500Mbps 24M,nationwide,online,eWallet credits,credits value,50,50,MYR,
+2021-12-05,2022-04-03,Time,Time,all products,1Gbps 24M,nationwide,online,eWallet credits,credits value,100,100,MYR,
+2021-12-05,2022-02-06,Time,Time,all products,1Gbps 24M,nationwide,all,monthly discounts,monthly discount,50,300,MYR,
+2021-12-05,2022-02-06,Time,Time,all products,1Gbps 24M,nationwide,all,Free Gift,free gifts given,1,169,MYR,mesh node
+2021-12-05,2022-02-06,Time,Time,all products,500Mbps 24M,nationwide,online,monthly discounts,monthly discount,10,240,MYR,
+2021-12-05,2022-02-06,Time,Time,all products,500Mbps 24M,nationwide,online,Free Gift,free gifts given,1,169,MYR,mesh node
