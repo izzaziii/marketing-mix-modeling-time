@@ -19,7 +19,7 @@ def read_file(filepath: str) -> pd.DataFrame:
         print("Empty dataframe!")
 
 
-def process_twitter_data(df: pd.DataFrame) -> pd.DataFrame:
+def process_tiktok_data(df: pd.DataFrame) -> pd.DataFrame:
     """Processes the data for use in the MMM. Steps:
     - Sets date column to datetime and the index
     - Groups by Campaign name, campaign objective type, campaign type, ad group type, optimization goal
@@ -65,7 +65,7 @@ def get_export_details(
 
     Args:
         file_version (str): Number version, ie 001, 002, 003
-        processed_filepath (str, optional): Processed data folder. Defaults to "C:\Users\izzaz\Documents\1 Projects\T - Onboarding of Mutinex MMM\data\processed".
+        processed_filepath (str, optional): Processed data folder. Defaults to "C:\\Users\\izzaz\\Documents\\1 Projects\\T - Onboarding of Mutinex MMM\\data\\processed".
         name_responsible (str, optional): Name of person generating this data. Defaults to "izzaz".
         dataset_name (str, optional): Label of data. Defaults to "paidmedia".
         dataset_type (str, optional): breakdown category of data. Defaults to "tiktok".
@@ -89,7 +89,7 @@ def export_to_csv(df: pd.DataFrame, full_filepath: str) -> None:
         full_filepath (str): Processed folder
     """
     try:
-        df.to_csv(full_filepath)
+        df.to_csv(full_filepath, index=False)
         print(f"File exported to {full_filepath}")
     except Exception as e:
         print(f"Error: {e}")
@@ -99,7 +99,7 @@ def main():
     """Main Logic"""
     filepath: str = "../data/raw/20250106_tiktok.csv"
     df: pd.DataFrame = read_file(filepath)
-    processed_df: pd.DataFrame = process_twitter_data(df)
+    processed_df: pd.DataFrame = process_tiktok_data(df)
     full_filepath: str = get_export_details("002")
     export_to_csv(processed_df, full_filepath)
 
