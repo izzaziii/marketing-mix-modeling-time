@@ -207,11 +207,11 @@ def export_data_to_csv(
 if __name__ == "__main__":
     # Example usage
     logging.basicConfig(level=logging.INFO)
-    database_name = "deep-diver"
+    database_name = "deep-diver-v2"
     collection_name = "boreport"
     date_col = "Probability 90% Date"
     today_date = datetime.now().strftime("%Y-%m-%d %H%M%S")
-    output_file = f"../data/processed/002_izzaz_{today_date}_sales.csv"
+    output_file = f"C:\\Users\\izzaz\\Documents\\1 Projects\\T - Onboarding of Mutinex MMM\\data\\processed\\003_izzaz_{today_date}_sales.csv"
     start_filter_date = datetime(2022, 1, 1)
 
     export_data_to_csv(
